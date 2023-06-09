@@ -518,7 +518,6 @@ namespace TGFitnessBot {
         }
 
         private async Task SendExerciseMessage(ITelegramBotClient botClient, Message message) {
-            Console.WriteLine(currentIndex[message.Chat.Id]);
             var exercise = exercises[currentIndex[message.Chat.Id]];
             var messageText = $"<b><u>Exercise №{currentIndex[message.Chat.Id] + 1}</u></b>\n\n" +
               $"<b>Name:</b> {exercise.name}\n\n" +
